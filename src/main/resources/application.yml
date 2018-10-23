@@ -14,4 +14,5 @@ logging:
     console: "%d - %msg%n"
 #  path: ../log/tomcat/  #默认是一个spring.log
   file: /var/log/tomcat/sell.log  #使用自定义的文件
-  leve: debug
+  leve:
+    com.imooc.sell.LoggerTest: debug
