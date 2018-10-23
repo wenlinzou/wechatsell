@@ -9,10 +9,10 @@ spring:
 server:
   servlet:
     context-path: /sell
-logging:
-  pattern:
-    console: "%d - %msg%n"
-#  path: ../log/tomcat/  #默认是一个spring.log
-  file: /var/log/tomcat/sell.log  #使用自定义的文件
-  leve:
-    com.imooc.sell.LoggerTest: debug
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: ../log/tomcat/  #默认是一个spring.log
+#  file: /var/log/tomcat/sell.log  #使用自定义的文件
+#  leve:
+#    com.imooc.sell.LoggerTest: debug
