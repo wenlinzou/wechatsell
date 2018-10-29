@@ -10,6 +10,8 @@ import org.springframework.data.domain.Example;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -60,5 +62,12 @@ public class ProductCategoryRepositoryTest {
         ProductCategory category = optional.get();
         category.setCategoryType(5);
         repository.save(category);
+    }
+
+    @Test
+    public void findByCategoryTypeInTest() {
+        List<Integer> categoryTypeList = Arrays.asList(2,3,5);
+        List<ProductCategory> result = repository.findByCategoryTypeIn(categoryTypeList);
+        Assert.assertNotEquals(0, result.size());
     }
 }
