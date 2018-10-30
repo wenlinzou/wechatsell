@@ -53,4 +53,6 @@ public class OrderMaster {
 
     /**更新时间*/
     private Date updateTime;
+
+    //数据库忽略  @Transient
 }
