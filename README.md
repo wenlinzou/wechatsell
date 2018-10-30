@@ -1,8 +1,13 @@
-5-3
-前端api文档
-商品列表
-get /sell/buyer/product/list
+
+
+### 前端api文档
+
+#### 商品列表
+
+`get /sell/buyer/product/list`
 返回
+
+```
 {
     "code": 0,
     "msg": "成功",
@@ -22,12 +27,18 @@ get /sell/buyer/product/list
         }
     ]
 }
+```
 
-创建订单api
-post /sell/buyer/order/create
+
+
+#### 创建订单api
+
+`post /sell/buyer/order/create`
 参数
-name phone address openid items[productId, productQuantity]
+`name phone address openid items[productId, productQuantity]`
 返回
+
+```
 {
     "code": 0,
     "msg": "成功",
@@ -35,14 +46,20 @@ name phone address openid items[productId, productQuantity]
         "orderId": "1540884316825817929"
     }
 }
+```
+
 
 
 备注：属性为null，不返回
-订单列表
-get /sell/buyer/order/list
+
+#### 订单列表
+
+`get /sell/buyer/order/list`
 参数
-openid page:从0开始 size
+`openid page`:从0开始 size
 返回
+
+```
 {
     "code": 0,
     "msg": "成功",
@@ -62,12 +79,18 @@ openid page:从0开始 size
         }
     ]
 }
+```
 
-订单详情
-get /sell/buyer/order/detail
+
+
+#### 订单详情
+
+`get /sell/buyer/order/detail`
 参数
-openid orderId
+`openid orderId`
 返回
+
+```
 {
     "code": 0,
     "msg": "成功",
@@ -95,14 +118,23 @@ openid orderId
         ]
     }
 }
+```
 
-取消订单
-post /sell/buyer/order/cancel
+
+
+#### 取消订单
+
+`post /sell/buyer/order/cancel`
 参数
-openid orderId
+`openid orderId`
 返回
+
+```
 {
     "code": 0,
     "msg": "成功",
     "data": null
 }
+```
+
+
